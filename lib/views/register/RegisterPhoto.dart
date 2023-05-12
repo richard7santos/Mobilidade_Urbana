@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '';
+import 'package:image_picker/image_picker.dart';
+import 'dart:io';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
@@ -19,21 +20,23 @@ class _RegisterPhotoState extends State<RegisterPhoto> {
   TextEditingController _ctrlNumero = TextEditingController();
   bool _motorista = false;
   String _errorMessage = "";
+  late File _imagem;
 
-  Future ? _recuperarImagem(String origemImagem){
+  Future  _recuperarImagem(String origemImagem) async {
+    late File imagemSelecionada;
     switch (origemImagem){
       case "camera" :
-        print("camera");
-
+        imagemSelecionada = await ImagePicker.pickImage(source: ImageSource.camera);
         break;
       case "galeria":
-        print("Galeria");
+        imagemSelecionada = await ImagePicker.pickImage(source: ImageSource.gallery);
         break;
     }
+    setState((){
+      _imagem = imagemSelecionada;
+    });
 
   }
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,7 +56,7 @@ class _RegisterPhotoState extends State<RegisterPhoto> {
                   CircleAvatar(
                     radius: 100,
                     backgroundColor: Colors.white,
-                    backgroundImage: NetworkImage("https://static.vecteezy.com/ti/vetor-gratis/p1/7319933-black-avatar-person-icons-user-profile-icon-vetor.jpg")
+                    backgroundImage: NetworkImage("https://e7.pngegg.com/pngimages/1008/377/png-clipart-computer-icons-avatar-user-profile-avatar-heroes-black-hair-thumbnail.png")
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,

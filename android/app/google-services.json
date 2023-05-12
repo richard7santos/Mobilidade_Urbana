@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "481981756614",
+    "project_id": "go-urban-a7c50",
+    "storage_bucket": "go-urban-a7c50.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:481981756614:android:f2dcd125a5562f67f553c7",
+        "android_client_info": {
+          "package_name": "br.com.richardsantos.mobilidade_urbana"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "481981756614-5mnbnka6qb7n3102igp8o62hk7qd9iau.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7_b2axog-LPQ99oL04U4JhlhqB-XgpRA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "481981756614-5mnbnka6qb7n3102igp8o62hk7qd9iau.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
